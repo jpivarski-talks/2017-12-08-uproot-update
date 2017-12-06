@@ -547,28 +547,43 @@
 %% \end{verbatim}
 %% \end{frame}
 
-\begin{frame}[fragile]{}
-\vspace{0.1 cm}
+\begin{frame}[fragile]{Use Bokeh as your TCanvas (even remotely)}
+\vspace{0.25 cm}
 \small
 \begin{minted}{bash}
 $ pip install bokeh --user
 \end{minted}
 \begin{minted}{python}
->>> canvas = hist.bokeh.plot()   # canvas is a singleton
->>> canvas.show()
->>> Created new window in existing browser session.
+>>> canvas = uproot.BokehCanvas()   # canvas is a singleton
+>>> canvas.show()                   # could set hosts="*", port=12345
 \end{minted}
 \begin{verbatim}
+Created new window in existing browser session.
 WARNING:tornado.access:404 GET /favicon.ico (::1) 1.09ms
 \end{verbatim}
 \begin{minted}{python}
+>>> hist.bokeh.plot()
 >>> uproot.BokehCanvas().url
 \end{minted}
 \begin{verbatim}
 'http://localhost:41712'
 \end{verbatim}
 
+\vspace{0.2 cm}
+If Python is running on a remote machine, set \\
+{\tt hosts="*"} or your IP address (security) and \\
+manually enter the URL in your web browser.
 
+\vspace{0.2 cm}
+The (single) web browser will have a live view of \\
+anything you {\tt hist.bokeh.plot()}.
+
+\vspace{-4.25 cm}
+\hfill \includegraphics[height=4.5 cm]{bokeh_plot.png}\hspace{1 cm}
+
+\vspace{-2.1 cm}
+\hfill \includegraphics[width=1.5 cm]{danger.png}\hspace{-0.9 cm}
+\vspace{3 cm}
 \end{frame}
 
 
