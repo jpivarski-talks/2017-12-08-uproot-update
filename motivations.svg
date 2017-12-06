@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="514.06281"
+   height="319.5946"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="motivations.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="231.12054"
+     inkscape:cy="188.69506"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-92.141504,-432.04081)">
+    <path
+       sodipodi:type="star"
+       style="color:#000000;fill:#d5f6ff;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985"
+       sodipodi:sides="3"
+       sodipodi:cx="361.12955"
+       sodipodi:cy="565.97375"
+       sodipodi:r1="105.57544"
+       sodipodi:r2="65.982086"
+       sodipodi:arg1="-0.32628907"
+       sodipodi:arg2="0.72090843"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 461.13465,532.13365 340.43339,669.50077 281.8206,496.28685 z"
+       inkscape:transform-center-x="-16.729199"
+       inkscape:transform-center-y="-17.425131" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="167.6274"
+       y="450.16281"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="167.6274"
+         y="450.16281">Data Preservation</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3007"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       transform="translate(-18.182746,-2.0203051)"><flowRegion
+         id="flowRegion3009"><rect
+           id="rect3011"
+           width="166.67517"
+           height="79.296944"
+           x="115.15739"
+           y="460.41278" /></flowRegion><flowPara
+         id="flowPara3013">Combine Python's dynamic typing with ROOT's embedded streamers to access any data structures without the original header files/object libraries.</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="249.50769"
+       y="723.05243"
+       id="text2991"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2993"
+         x="249.50769"
+         y="723.05243">My Research</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3015"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       transform="translate(-27.779195,11.378821)"><flowRegion
+         id="flowRegion3017"><rect
+           id="rect3019"
+           width="210.11174"
+           height="66.67009"
+           x="345.97723"
+           y="676.08038" /></flowRegion><flowPara
+         id="flowPara3021">A codebase that I can control and quickly modify to test new modes of data access, such as object stores, database-style indexing, query servers.</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="534.88177"
+       y="479.86362"
+       id="text2995"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2997"
+         x="534.88177"
+         y="479.86362">Physics Analysis</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3023"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       transform="translate(-13.637059,-53.131983)"><flowRegion
+         id="flowRegion3025"><rect
+           id="rect3027"
+           width="110.1066"
+           height="112.12694"
+           x="495.98489"
+           y="541.22498"
+           style="text-align:start;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara3029">Complete Numpy integration for accessing machine learning libraries, convenience of Python backed by fast, compiled code.</flowPara></flowRoot>  </g>
+</svg>

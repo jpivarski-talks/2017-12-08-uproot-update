@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="514.06281"
+   height="319.5946"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="motivations-2.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="79.092579"
+     inkscape:cy="173.0377"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:window-width="853"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path3918" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path3921" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstartd"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstartd">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4545" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1MendZ"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1MendZ">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4548" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1MstartP"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1MstartP">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4551" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1MendA"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1MendA">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4554" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart4"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart4">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4557" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mendz"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mendz">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="stroke:#ff0000;stroke-width:1.0pt;fill:#ff0000;fill-rule:evenodd"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4560" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-92.141504,-432.04081)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       inkscape:transform-center-y="-17.425131"
+       inkscape:transform-center-x="-16.729199"
+       d="M 461.13465,532.13365 340.43339,669.50077 281.8206,496.28685 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="0.72090843"
+       sodipodi:arg1="-0.32628907"
+       sodipodi:r2="65.982086"
+       sodipodi:r1="105.57544"
+       sodipodi:cy="565.97375"
+       sodipodi:cx="361.12955"
+       sodipodi:sides="3"
+       id="path2985"
+       style="color:#000000;fill:#d5f6ff;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="star" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text2987"
+       y="450.16281"
+       x="167.6274"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       xml:space="preserve"><tspan
+         y="450.16281"
+         x="167.6274"
+         id="tspan2989"
+         sodipodi:role="line">Data Preservation</tspan></text>
+    <flowRoot
+       transform="translate(-18.182746,-2.0203051)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       id="flowRoot3007"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3009"><rect
+           y="460.41278"
+           x="115.15739"
+           height="79.296944"
+           width="166.67517"
+           id="rect3011" /></flowRegion><flowPara
+         id="flowPara3013">Combine Python's dynamic typing with ROOT's embedded streamers to access any data structures without the original header files/object libraries.</flowPara></flowRoot>    <text
+       sodipodi:linespacing="125%"
+       id="text2991"
+       y="723.05243"
+       x="249.50769"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       xml:space="preserve"><tspan
+         y="723.05243"
+         x="249.50769"
+         id="tspan2993"
+         sodipodi:role="line">My Research</tspan></text>
+    <flowRoot
+       transform="translate(-27.779195,11.378821)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       id="flowRoot3015"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3017"><rect
+           y="676.08038"
+           x="345.97723"
+           height="66.67009"
+           width="210.11174"
+           id="rect3019" /></flowRegion><flowPara
+         id="flowPara3021">A codebase that I can control and quickly modify to test new modes of data access, such as object stores, database-style indexing, query servers.</flowPara></flowRoot>    <text
+       sodipodi:linespacing="125%"
+       id="text2995"
+       y="479.86362"
+       x="534.88177"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       xml:space="preserve"><tspan
+         y="479.86362"
+         x="534.88177"
+         id="tspan2997"
+         sodipodi:role="line">Physics Analysis</tspan></text>
+    <flowRoot
+       transform="translate(-13.637059,-53.131983)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       id="flowRoot3023"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3025"><rect
+           style="text-align:start;text-anchor:start"
+           y="541.22498"
+           x="495.98489"
+           height="112.12694"
+           width="110.1066"
+           id="rect3027" /></flowRegion><flowPara
+         id="flowPara3029">Complete Numpy integration for accessing machine learning libraries, convenience of Python backed by fast, compiled code.</flowPara></flowRoot>    <path
+       sodipodi:open="true"
+       sodipodi:end="2.9840317"
+       sodipodi:start="1.8142901"
+       transform="matrix(0.9593419,0.28224657,-0.28224657,0.9593419,159.36758,362.95424)"
+       d="M 204.2351,281.06432 C 118.83767,268.99053 54.403003,229.02431 40.596021,179.56562"
+       sodipodi:ry="124.75385"
+       sodipodi:rx="219.20309"
+       sodipodi:cy="159.99051"
+       sodipodi:cx="257.08383"
+       id="path3134"
+       style="stroke-linejoin:miter;enable-background:accumulate;marker-end:url(#Arrow1MendZ);stroke-opacity:1;color:#000000;marker-start:url(#Arrow1Mstartd);stroke-dashoffset:0;visibility:visible;stroke:#ff0000;stroke-linecap:butt;stroke-miterlimit:4;marker:none;stroke-dasharray:none;overflow:visible;stroke-width:2.99999999;display:inline;fill:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:open="true"
+       sodipodi:end="5.0635167"
+       sodipodi:start="4.0910587"
+       sodipodi:type="arc"
+       style="stroke-linejoin:miter;enable-background:accumulate;marker-end:url(#Arrow1MendA);stroke-opacity:1;color:#000000;marker-start:url(#Arrow1MstartP);stroke-dashoffset:0;visibility:visible;stroke:#ff0000;stroke-linecap:butt;stroke-miterlimit:4;marker:none;stroke-dasharray:none;overflow:visible;stroke-width:2.99999999;display:inline;fill:none"
+       id="path3136"
+       sodipodi:cx="257.08383"
+       sodipodi:cy="159.99051"
+       sodipodi:rx="219.20309"
+       sodipodi:ry="124.75385"
+       d="M 129.48191,58.552553 C 188.42313,34.537123 264.41407,28.65841 332.48026,42.84846"
+       transform="matrix(0.9593419,0.28224657,-0.28224657,0.9593419,159.36758,362.95424)" />
+    <path
+       sodipodi:open="true"
+       sodipodi:end="6.7851951"
+       sodipodi:start="5.9476978"
+       sodipodi:type="arc"
+       style="stroke-linejoin:miter;enable-background:accumulate;marker-end:url(#Arrow1Mendz);stroke-opacity:1;color:#000000;marker-start:url(#Arrow1Mstart4);stroke-dashoffset:0;visibility:visible;stroke:#ff0000;stroke-linecap:butt;stroke-miterlimit:4;marker:none;stroke-dasharray:none;overflow:visible;stroke-width:2.99999999;display:inline;fill:none"
+       id="path3138"
+       sodipodi:cx="257.08383"
+       sodipodi:cy="159.99051"
+       sodipodi:rx="219.20309"
+       sodipodi:ry="124.75385"
+       d="m 464.06634,118.91786 c 20.44652,33.37451 15.0585,70.11871 -14.8253,101.10275"
+       transform="matrix(0.9593419,0.28224657,-0.28224657,0.9593419,159.36758,362.95424)" />
+    <rect
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4649"
+       width="66.670067"
+       height="35.860416"
+       x="152.24557"
+       y="608.19373" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="193.15675"
+       y="623.34607"
+       id="text4631"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4633"
+         x="193.15675"
+         y="623.34607">share CMS public data</tspan><tspan
+         sodipodi:role="line"
+         x="193.15675"
+         y="638.34607"
+         id="tspan4635">with CS colleagues</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="453.93008"
+       y="398.7955"
+       id="text4637"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.98063446,0.19584701,-0.19584701,0.98063446,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4639"
+         x="453.93008"
+         y="398.7955">analysis on</tspan><tspan
+         sodipodi:role="line"
+         x="453.93008"
+         y="413.7955"
+         id="tspan4641">old CMSSW versions</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="498.72791"
+       y="646.07446"
+       id="text4643"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4645"
+         x="498.72791"
+         y="646.07446">user base in a position</tspan><tspan
+         sodipodi:role="line"
+         x="498.72791"
+         y="661.07446"
+         id="tspan4647">to try new features</tspan></text>
+  </g>
+</svg>
