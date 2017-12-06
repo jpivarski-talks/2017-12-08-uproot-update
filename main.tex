@@ -52,7 +52,7 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{Start with a visual aid: pass around the ZEBRA manual}
+\begin{frame}{(Everybody take a look at the ZEBRA manual!)}
 \vspace{0.6 cm}
 \begin{center}
 \includegraphics[height=6 cm]{scotty.jpg}
@@ -61,14 +61,14 @@
 \end{center}
 \end{frame}
 
-\begin{frame}
-\vspace{1 cm}
+\begin{frame}{``Data bank'' management systems}
+\vspace{0.25 cm}
 \begin{center}
 \includegraphics[width=0.95\linewidth]{history.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}{File formats and {\it specifications}}
+\begin{frame}{File formats {\it and specifications}}
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.1\linewidth}
@@ -118,10 +118,31 @@ File formats that are used for many years accumulate implementations, to access 
 \uncover<3->{\textcolor{darkblue}{Outlier:} Python Pickle is only reimplemented when the language is reimplemented.}
 
 \vspace{0.2 cm}
-\uncover<4->{\textcolor{darkblue}{Outlier:} the ROOT format is defined by its implementation, not a specification.}
+\uncover<4->{\textcolor{darkblue}{Outlier:} the ROOT format is defined by its implementation, not a specification, making it hard to reimplement.}
 
 \end{columns}
 \end{frame}
+
+\begin{frame}{ROOT I/O implementations}
+\vspace{0.25 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{p{2 cm} c p{4.7 cm} p{5.25 cm}}
+\centering ROOT & C++ & ROOT itself. & The ROOT team \\
+\centering inlib/exlib & C++ & Intended as an alternative, embedded in GEANT-4. & Guy Barrand \\
+\centering root4j/ spark-root & Java/Scala & For Spark and other Big Data projects that run on Java. & Started by Tony Johnson in 2001, updated by Viktor Khristenko \\
+\centering JsRoot & Javascript & For interacting with ROOT in web browsers or standalone. & Bertrand Bellenot, Sergey Linev (in the ROOT team) \\
+\centering rootio & Go & go-hep ecosystem in Go. & Sebastien Binet \\
+\centering \only<1>{\textcolor{black}{uproot}}\only<2>{\textcolor{blue}{uproot}} & \only<1>{\textcolor{black}{Python}}\only<2>{\textcolor{blue}{Python}} & \only<1>{\textcolor{black}{For quickly getting ROOT data into Numpy and Pandas for machine learning.}}\only<2>{\textcolor{blue}{For quickly getting ROOT data into Numpy and Pandas for machine learning.}} & \only<1>{\textcolor{black}{Jim Pivarski (me)}}\only<2>{\textcolor{blue}{Jim Pivarski (me)}} \\
+& Rust? & & \\
+\end{tabular}
+\end{columns}
+\end{frame}
+
+
+
+
 
 
 \end{document}
