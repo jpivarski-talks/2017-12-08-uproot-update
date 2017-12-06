@@ -589,7 +589,69 @@
 %% \vspace{3 cm}
 %% \end{frame}
 
-\begin{frame}{}
+%% \begin{frame}[fragile]{Caching intermediate results}
+%% \vspace{0.3 cm}
+%% \small
+%% uproot adheres to the Python philosophy of avoiding implicit actions.
+
+%% \vspace{0.2 cm}
+%% Caching must be explicit: every time you call {\tt tree.arrays()}, it reads from the file, {\it from scratch,} unless a cache is provided.
+
+%% \vspace{0.2 cm}
+%% \begin{minted}{python}
+%% >>> t = uproot.open("~/bigfile.root")["Events"]
+%% >>> cache = {}
+%% >>> t.array("Muon.pt", cache=cache)
+%% \end{minted}
+%% \begin{verbatim}
+%% jaggedarray([[ 28.07074928],
+%%              ...,
+%%              [ 33.39884186  30.11572647  14.1813221 ]])
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> cache
+%% \end{minted}
+%% \begin{verbatim}
+%% {'/home/pivarski/bigfile.root;Events;Muon.pt;asjagged(asdtype(Bf4,Lf4,
+%% (),()));0-47407': jaggedarray([[ 28.07074928],
+%%              ...,
+%%              [ 33.39884186  30.11572647  14.1813221 ]])}
+%% \end{verbatim}
+
+%% \vspace{-6 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{6 cm}
+%% \end{frame}
+
+\begin{frame}{Caching options}
+\vspace{0.25 cm}
+Any dict-like object can be a cache. (On the previous page, we used a dict.)
+
+\vspace{0.25 cm}
+But dicts don't release objects when running low on memory. Therefore, uproot provides a suite of dict-like objects that {\it do} release the least-recently used (LRU) objects.
+
+\vspace{0.25 cm}
+\begin{itemize}
+\item {\tt\small uproot.cache.MemoryCache}: a subclass of dict with LRU policy.
+\item {\tt\small uproot.cache.ThreadSafeMemoryCache}: same with a lock for multithreading.
+\item {\tt\small uproot.cache.DiskCache}: multi-process safe and can be resumed after a Python process exits.
+\end{itemize}
+
+\begin{uncoverenv}<2->
+\vspace{0.25 cm}
+They can be used in any of three arguments:
+
+\vspace{0.25 cm}
+\begin{itemize}
+\item {\it cache}: caches finalized arrays.
+\item {\it basketcache}: caches decompressed basket data that may be interpreted more than once.
+\item {\it keycache}: tiny key data; probably put this in a dict without LRU.
+\end{itemize}
+\end{uncoverenv}
+
+\vspace{-7.7 cm}
+\hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+\vspace{7.7 cm}
 \end{frame}
 
 
