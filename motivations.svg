@@ -10,13 +10,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="514.06281"
-   height="319.5946"
+   height="323.5946"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="motivations.svg">
-  <defs
-     id="defs4" />
+   sodipodi:docname="motivations-2.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="231.12054"
-     inkscape:cy="188.69506"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="321.52919"
+     inkscape:cy="132.6316"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -34,11 +32,126 @@
      fit-margin-left="5"
      fit-margin-right="5"
      fit-margin-bottom="5"
-     inkscape:window-width="1920"
-     inkscape:window-height="1080"
-     inkscape:window-x="0"
+     inkscape:window-width="1055"
+     inkscape:window-height="1027"
+     inkscape:window-x="859"
      inkscape:window-y="0"
      inkscape:window-maximized="0" />
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path3918"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path3921"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstartd"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstartd">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4545"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1MendZ"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1MendZ">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4548"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1MstartP"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1MstartP">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4551"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1MendA"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1MendA">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4554"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart4">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4557"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mendz"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mendz">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4560"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -52,93 +165,93 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(-92.141504,-428.04081)"
      id="layer1"
-     transform="translate(-92.141504,-432.04081)">
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <path
-       sodipodi:type="star"
-       style="color:#000000;fill:#d5f6ff;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="path2985"
-       sodipodi:sides="3"
-       sodipodi:cx="361.12955"
-       sodipodi:cy="565.97375"
-       sodipodi:r1="105.57544"
-       sodipodi:r2="65.982086"
-       sodipodi:arg1="-0.32628907"
-       sodipodi:arg2="0.72090843"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="M 461.13465,532.13365 340.43339,669.50077 281.8206,496.28685 z"
+       inkscape:transform-center-y="-17.425131"
        inkscape:transform-center-x="-16.729199"
-       inkscape:transform-center-y="-17.425131" />
+       d="M 461.13465,532.13365 340.43339,669.50077 281.8206,496.28685 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="0.72090843"
+       sodipodi:arg1="-0.32628907"
+       sodipodi:r2="65.982086"
+       sodipodi:r1="105.57544"
+       sodipodi:cy="565.97375"
+       sodipodi:cx="361.12955"
+       sodipodi:sides="3"
+       id="path2985"
+       style="color:#000000;fill:#d5f6ff;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="star" />
     <text
-       xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="167.6274"
-       y="450.16281"
+       sodipodi:linespacing="125%"
        id="text2987"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan2989"
+       y="446.16281"
+       x="167.6274"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       xml:space="preserve"><tspan
+         y="446.16281"
          x="167.6274"
-         y="450.16281">Data Preservation</tspan></text>
+         id="tspan2989"
+         sodipodi:role="line">Data Preservation</tspan></text>
     <flowRoot
-       xml:space="preserve"
+       transform="translate(-18.182746,-2.0203051)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
        id="flowRoot3007"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(-18.182746,-2.0203051)"><flowRegion
+       xml:space="preserve"><flowRegion
          id="flowRegion3009"><rect
-           id="rect3011"
-           width="166.67517"
-           height="79.296944"
+           y="460.41278"
            x="115.15739"
-           y="460.41278" /></flowRegion><flowPara
+           height="79.296944"
+           width="166.67517"
+           id="rect3011" /></flowRegion><flowPara
          id="flowPara3013">Combine Python's dynamic typing with ROOT's embedded streamers to access any data structures without the original header files/object libraries.</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="249.50769"
-       y="723.05243"
+       sodipodi:linespacing="125%"
        id="text2991"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan2993"
-         x="249.50769"
-         y="723.05243">My Research</tspan></text>
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3015"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(-27.779195,11.378821)"><flowRegion
-         id="flowRegion3017"><rect
-           id="rect3019"
-           width="210.11174"
-           height="66.67009"
-           x="345.97723"
-           y="676.08038" /></flowRegion><flowPara
-         id="flowPara3021">A codebase that I can control and quickly modify to test new modes of data access, such as object stores, database-style indexing, query servers.</flowPara></flowRoot>    <text
-       xml:space="preserve"
+       y="723.05243"
+       x="249.50769"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="534.88177"
-       y="479.86362"
-       id="text2995"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan2997"
-         x="534.88177"
-         y="479.86362">Physics Analysis</tspan></text>
+       xml:space="preserve"><tspan
+         y="723.05243"
+         x="249.50769"
+         id="tspan2993"
+         sodipodi:role="line">My Research</tspan></text>
     <flowRoot
-       xml:space="preserve"
-       id="flowRoot3023"
+       transform="translate(-27.779195,11.378821)"
        style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(-13.637059,-53.131983)"><flowRegion
+       id="flowRoot3015"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3017"><rect
+           y="676.08038"
+           x="345.97723"
+           height="66.67009"
+           width="210.11174"
+           id="rect3019" /></flowRegion><flowPara
+         id="flowPara3021">A codebase that I can control and quickly modify to test new modes of data access, such as object stores, database-style indexing, query servers.</flowPara></flowRoot>    <text
+       sodipodi:linespacing="125%"
+       id="text2995"
+       y="475.86362"
+       x="534.88177"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       xml:space="preserve"><tspan
+         y="475.86362"
+         x="534.88177"
+         id="tspan2997"
+         sodipodi:role="line">Physics Analysis</tspan></text>
+    <flowRoot
+       transform="translate(-13.637059,-53.131983)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       id="flowRoot3023"
+       xml:space="preserve"><flowRegion
          id="flowRegion3025"><rect
-           id="rect3027"
-           width="110.1066"
-           height="112.12694"
-           x="495.98489"
+           style="text-align:start;text-anchor:start"
            y="541.22498"
-           style="text-align:start;text-anchor:start" /></flowRegion><flowPara
+           x="495.98489"
+           height="112.12694"
+           width="110.1066"
+           id="rect3027" /></flowRegion><flowPara
          id="flowPara3029">Complete Numpy integration for accessing machine learning libraries, convenience of Python backed by fast, compiled code.</flowPara></flowRoot>  </g>
 </svg>
