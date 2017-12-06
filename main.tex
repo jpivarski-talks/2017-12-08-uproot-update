@@ -426,8 +426,26 @@
 %% \vspace{7.7 cm}
 %% \end{frame}
 
-\begin{frame}{}
+\begin{frame}[fragile]{Including STL vectors in a MiniAOD file}
+\vspace{0.25 cm}
+\small
+\begin{minted}{python}
+>>> t = uproot.open("~/cmssw-miniaod.root")["Events"]
+\end{minted}
+\begin{verbatim}
+>>> for basket in (t["GenEventInfoProduct_generator__HLT.obj.weights_"]
+                   .iterate_baskets()):
+...     print(basket)
+...
+[[  1.000000e+00   4.201630e-05 ...   4.242230e-05   3.990430e-05],
+ [  1.000000e+00   4.201630e-05 ...   2.648060e-05   2.773620e-05],
+ [  1.000000e+00   4.201630e-05 ...   4.329220e-05   4.058060e-05],
+\end{verbatim}
 
+\vspace{0.25 cm}
+Though uproot was designed for analysis-ready TTrees, it will someday cover all data types by reading streamer data.
+
+\hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
 \end{frame}
 
 \end{document}
