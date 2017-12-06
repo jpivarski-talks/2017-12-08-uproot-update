@@ -30,7 +30,7 @@
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\title[2017-12-08-uproot-update]{uproot update}
+\title[2017-12-08-uproot-update]{\Huge uproot update}
 \author{Jim Pivarski}
 \institute{Princeton University -- DIANA-HEP}
 \date{December 12, 2017}
@@ -53,8 +53,75 @@
 % START START START START START START START START START START START START START
 
 \begin{frame}{Start with a visual aid: pass around the ZEBRA manual}
-\vspace{0.5 cm}
-HERE
+\vspace{0.6 cm}
+\begin{center}
+\includegraphics[height=6 cm]{scotty.jpg}
+
+\LARGE ``Hello, computer?''
+\end{center}
 \end{frame}
+
+\begin{frame}
+\vspace{1 cm}
+\begin{center}
+\includegraphics[width=0.95\linewidth]{history.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}{File formats and {\it specifications}}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l c c c}
+& inception & specification & implementations \\\hline
+
+FITS & 1981 & \href{https://fits.gsfc.nasa.gov/standard30/fits_standard30aa.pdf}{\textcolor{blue}{\tiny https://fits.gsfc.nasa.gov/standard30/fits\_standard30aa.pdf}} & 38 \\
+
+netCDF,HDF4/5 & 1992 & \href{https://support.hdfgroup.org/HDF5/doc/H5.format.html}{\textcolor{blue}{\tiny https://support.hdfgroup.org/HDF5/doc/H5.format.html}} & 35 \\
+
+ROOT & 1995 & {\tiny some class headers like \href{https://root.cern.ch/doc/master/classTFile.html}{\textcolor{blue}{TFile}} and \href{https://root.cern.ch/doc/master/classTKey.html}{\textcolor{blue}{TKey}}; not enough info to read a file} & 6 \\
+
+Pickle & 1996 & {\tiny {\it implementation} changes: 1$\to$2 \href{http://legacy.python.org/dev/peps/pep-0307/}{\textcolor{blue}{PEP-307}}, 3$\to$4 \href{https://www.python.org/dev/peps/pep-3154/}{\textcolor{blue}{PEP-3154}}; not a real spec} & 4 \\
+
+Protocol buffers & 2001 & \href{https://developers.google.com/protocol-buffers/docs/encoding}{\textcolor{blue}{\tiny https://developers.google.com/protocol-buffers/docs/encoding}} & 20 \\
+
+Thrift & 2007 & {\tiny {\bf UNOFFICIAL:} \href{https://erikvanoosten.github.io/thrift-missing-specification/}{\textcolor{blue}{\tiny https://erikvanoosten.github.io/thrift-missing-specification/}}} & 15 \\
+
+Avro & 2009 & \href{http://avro.apache.org/docs/current/spec.html}{\textcolor{blue}{\tiny http://avro.apache.org/docs/current/spec.html}} & 13 \\
+
+Parquet & 2013 & \href{http://parquet.apache.org/documentation/latest/}{\textcolor{blue}{\tiny http://parquet.apache.org/documentation/latest/}} & 5 \\
+
+Arrow/Feather & 2016 & \href{https://arrow.apache.org/docs/memory_layout.html}{\textcolor{blue}{\tiny https://arrow.apache.org/docs/memory\_layout.html}} & 7 \\
+\end{tabular}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\vspace{1 cm}
+\begin{columns}
+\column{0.7\linewidth}
+\includegraphics[width=\linewidth]{specs.pdf}
+
+\column{0.35\linewidth}
+\textcolor{darkblue}{\underline{General trend}}
+
+\vspace{0.1 cm}
+File formats that are used for many years accumulate implementations, to access the data in different ways.
+
+\small
+
+\vspace{0.4 cm}
+\uncover<2->{\textcolor{darkblue}{Outlier:} netCDF/HDF4/5 may be too broad to call one format.}
+
+\vspace{0.2 cm}
+\uncover<3->{\textcolor{darkblue}{Outlier:} Python Pickle is only reimplemented when the language is reimplemented.}
+
+\vspace{0.2 cm}
+\uncover<4->{\textcolor{darkblue}{Outlier:} the ROOT format is defined by its implementation, not a specification.}
+
+\end{columns}
+\end{frame}
+
 
 \end{document}
