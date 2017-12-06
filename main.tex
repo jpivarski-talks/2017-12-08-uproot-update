@@ -20,6 +20,7 @@
 \usepackage{bold-extra}
 \usepackage{minted}
 \usepackage[thicklines]{cancel}
+\usepackage{tabularx}
 
 \xdefinecolor{dianablue}{rgb}{0.18,0.24,0.31}
 \xdefinecolor{darkblue}{rgb}{0.1,0.1,0.7}
@@ -181,6 +182,18 @@ pip install uproot --user
 \href{https://groups.google.com/forum/#!forum/uproot-users}{\textcolor{blue}{https://groups.google.com/forum/\#!forum/uproot-users}}
 \end{uncoverenv}
 \end{center}
+\end{frame}
+
+\begin{frame}{Levels of trustworthiness}
+\large
+\renewcommand{\arraystretch}{4}
+\begin{tabular}{p{2 cm} p{11 cm}}
+\parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{safe.png}} & Feature is an essential part of the codebase; I designed around it and have included a formal test suite (build tests). \\
+\parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{caution.png}} & Uses same code paths as above and {\it informally} tested, but not yet integrated into the formal tests. \\
+\parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{danger.png}} & I wrote it for this talk and have only tested the examples shown in these slides. \\
+\end{tabular}
+
+
 \end{frame}
 
 \end{document}
