@@ -324,37 +324,110 @@
 %% \vspace{4.5 cm}
 %% \end{frame}
 
-\begin{frame}[fragile]{Connector to an external package: Pandas}
-\vspace{0.25 cm}
-\small
-\begin{minted}{bash}
-$ pip install pandas --user
-\end{minted}
-\begin{minted}{python}
->>> df = t.pandas.df()   # all the same arguments as t.arrays()
->>> df
-\end{minted}
-\begin{verbatim}
-              E1          E2      Event          M  Q1  Q2     Run  \
-0      82.201866   60.621875   10507008  82.462692   1  -1  148031
-1      62.344929   82.201866   10507008  83.626204  -1   1  148031
-2      62.344929   81.582778   10507008  83.308465  -1   1  148031
-3      60.621875   81.582778   10507008  82.149373  -1   1  148031
-...
-2302   1.199406 -26.398400  -74.532431 -153.847604   GT
-2303   1.201350 -26.398400  -74.808372 -153.847604   GG
+%% \begin{frame}[fragile]{Connector to an external package: Pandas}
+%% \vspace{0.25 cm}
+%% \small
+%% \begin{minted}{bash}
+%% $ pip install pandas --user
+%% \end{minted}
+%% \begin{minted}{python}
+%% >>> df = t.pandas.df()   # all the same arguments as t.arrays()
+%% >>> df
+%% \end{minted}
+%% \begin{verbatim}
+%%               E1          E2      Event          M  Q1  Q2     Run  \
+%% 0      82.201866   60.621875   10507008  82.462692   1  -1  148031
+%% 1      62.344929   82.201866   10507008  83.626204  -1   1  148031
+%% 2      62.344929   81.582778   10507008  83.308465  -1   1  148031
+%% 3      60.621875   81.582778   10507008  82.149373  -1   1  148031
+%% ...
+%% 2302   1.199406 -26.398400  -74.532431 -153.847604   GT
+%% 2303   1.201350 -26.398400  -74.808372 -153.847604   GG
 
-[2304 rows x 20 columns]
-\end{verbatim}
+%% [2304 rows x 20 columns]
+%% \end{verbatim}
 
-\vspace{0.25 cm}
-Then search the web to learn how to do exploratory analysis, make plots, apply machine learning algorithms, etc. (Or read the {\it Python for Data Analysis} book.)
+%% \vspace{0.25 cm}
+%% Then search the web to learn how to do exploratory analysis, make plots, apply machine learning algorithms, etc. (Or read the {\it Python for Data Analysis} book.)
 
-\vspace{-3 cm}
-\hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
-\vspace{3 cm}
+%% \vspace{-3 cm}
+%% \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
+%% \vspace{3 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Accessing data with non-uniform width}
+%% \vspace{0.25 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> t = uproot.open("tests/samples/mc10events.root")["Events"]
+%% >>> a = t.array("Muon.pt")    # such as std::vector<numbers>
+%% >>> a
+%% \end{minted}
+%% \begin{verbatim}
+%% jaggedarray([[ 28.07074928],
+%%              [],
+%%              [ 5.52336693  5.4780116 4.13222885],
+%%              ...
+%%              [],
+%%              [ 6.85138178],
+%%              []])
+%% \end{verbatim}
+%% \begin{uncoverenv}<2->
+%% \begin{minted}{python}
+%% >>> a.contents
+%% \end{minted}
+%% \begin{verbatim}
+%% array([ 28.07074928,   5.52336693,   5.47801161,   4.13222885, ...
+%%          5.06344414,   6.85138178], dtype=float32)
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> a.stops
+%% \end{minted}
+%% \begin{verbatim}
+%% array([ 1,  1,  4,  7,  7,  8, 13, 13, 14, 14])
+%% \end{verbatim}
+%% \end{uncoverenv}
+
+%% \vspace{-7.7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{7.7 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Also, strings! (any variable-width data type can be a jagged array)}
+%% \vspace{0.5 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> t = uproot.open("tests/samples/sample.root")["sample"]
+%% >>> a = t.array("str")
+%% >>> a
+%% \end{minted}
+%% \begin{verbatim}strings(['hey-0' 'hey-1' 'hey-2' ... 'hey-27' 'hey-28' 'hey-29'])
+%% \end{verbatim}
+%% \begin{uncoverenv}<2->
+%% \begin{minted}{python}
+%% >>> a.jaggedarray.contents
+%% \end{minted}
+%% \begin{verbatim}array([104, 101, 121,  45,  48, 104, 101, 121,  45,  49, 104, 101,
+%%         121, 45,  50, 104, 101, 121,  45,  51, 104, 101, 121,  45,
+%%         ...
+%%         45,  50,  54, 104, 101, 121, 45,  50,  55, 104, 101, 121,
+%%         45,  50,  56, 104, 101, 121,  45,  50,  57], dtype=uint8)
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> a.jaggedarray.stops
+%% \end{minted}
+%% \begin{verbatim}array([  5,  10,  15,  20,  25,  30,  35,  40,  45,  50,  56,  62,
+%%        ...
+%%        152, 158, 164, 170])
+%% \end{verbatim}
+%% \end{uncoverenv}
+%% \vspace{-7.7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{7.7 cm}
+%% \end{frame}
+
+\begin{frame}{}
+
 \end{frame}
-
-
 
 \end{document}
