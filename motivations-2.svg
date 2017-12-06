@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="321.52919"
-     inkscape:cy="132.6316"
+     inkscape:zoom="1.4"
+     inkscape:cx="295.78377"
+     inkscape:cy="212.72571"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -317,19 +317,19 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="453.93008"
-       y="398.7955"
+       x="453.2991"
+       y="401.10669"
        id="text4637"
        sodipodi:linespacing="125%"
        transform="matrix(0.98063446,0.19584701,-0.19584701,0.98063446,0,0)"><tspan
          sodipodi:role="line"
-         id="tspan4639"
-         x="453.93008"
-         y="398.7955">analysis on</tspan><tspan
+         x="453.2991"
+         y="401.10669"
+         id="tspan4641">reduce version</tspan><tspan
          sodipodi:role="line"
-         x="453.93008"
-         y="413.7955"
-         id="tspan4641">old CMSSW versions</tspan></text>
+         x="453.2991"
+         y="416.10669"
+         id="tspan3032">constraints on analysis</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
