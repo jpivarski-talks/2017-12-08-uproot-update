@@ -98,8 +98,8 @@
 %% \end{columns}
 %% \end{frame}
 
-%% \begin{frame}
-%% \vspace{1 cm}
+%% \begin{frame}{Same table, as a plot}
+%% \vspace{0.25 cm}
 %% \begin{columns}
 %% \column{0.7\linewidth}
 %% \includegraphics[width=\linewidth]{specs.pdf}
@@ -108,7 +108,7 @@
 %% \textcolor{darkblue}{\underline{General trend}}
 
 %% \vspace{0.1 cm}
-%% File formats that are used for many years accumulate implementations, to access the data in different ways.
+%% File formats that are used for many years tend to accrete implementations, to access the data in different ways.
 
 %% \small
 
@@ -116,7 +116,7 @@
 %% \uncover<2->{\textcolor{darkblue}{Outlier:} netCDF/HDF4/5 may be too broad to call one format.}
 
 %% \vspace{0.2 cm}
-%% \uncover<3->{\textcolor{darkblue}{Outlier:} Python Pickle is only reimplemented when the language is reimplemented.}
+%% \uncover<3->{\textcolor{darkblue}{Outlier:} Python Pickle is only reimplemented when the whole language is reimplemented.}
 
 %% \vspace{0.2 cm}
 %% \uncover<4->{\textcolor{darkblue}{Outlier:} the ROOT format is defined by its implementation, not a specification, making it hard to reimplement.}
@@ -210,10 +210,11 @@
 %% \end{frame}
 
 %% \begin{frame}{Levels of trustworthiness}
+%% \vspace{-0.1 cm}
 %% \large
 %% \renewcommand{\arraystretch}{4}
 %% \begin{tabular}{p{2 cm} p{10 cm}}
-%% \parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{safe.png}} & The feature in question is an essential part of the codebase; I designed around it and have included a formal test suite. \\
+%% \parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{safe.png}} & The feature in question is an essential part of the codebase; I designed around it and have included a formal test suite. Also, there's documentation (references, docstrings). \\
 %% \parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{caution.png}} & Mostly the same code paths as above and {\it informally} tested, but not yet integrated into the formal tests. \\
 %% \parbox[c]{1.5 cm}{\includegraphics[width=1.5 cm]{danger.png}} & I wrote the feature for this talk and have only tested the examples shown here. \\
 %% \end{tabular}
@@ -301,7 +302,7 @@
 %% \small
 %% \begin{minted}{python}
 %% >>> import numpy
-%% >>> for px, py, pz in t.iterate(["px1","py1","pz1"], outputtype=tuple):
+%% >>> for px,py,pz in t.iterate(["px1","py1","pz1"], outputtype=tuple):
 %% ...     pt = numpy.sqrt(px**2 + py**2)
 %% ...     eta = numpy.arctanh(pz / numpy.sqrt(px**2 + py**2 + pz**2))
 %% ...     phi = numpy.arctan2(py, px)
@@ -361,7 +362,7 @@
 %% \begin{minted}{python}
 %% >>> t = uproot.open("tests/samples/mc10events.root")["Events"]
 %% >>> a = t.array("Muon.pt")    # such as std::vector<numbers>
-%% >>> a
+%% >>> a                         # variable length for each event
 %% \end{minted}
 %% \begin{verbatim}
 %% jaggedarray([[ 28.07074928],
@@ -393,40 +394,42 @@
 %% \vspace{7.7 cm}
 %% \end{frame}
 
-%% \begin{frame}[fragile]{Also, strings! (any variable-width data type can be a jagged array)}
+%% \begin{frame}[fragile]{Also, strings! (can store any variable-width data in jagged array)}
 %% \vspace{0.5 cm}
 %% \small
 %% \begin{minted}{python}
-%% >>> t = uproot.open("tests/samples/sample.root")["sample"]
-%% >>> a = t.array("str")
+%% >>> a = uproot.open("foriter2.root")["foriter2"]["data"]
 %% >>> a
 %% \end{minted}
-%% \begin{verbatim}strings(['hey-0' 'hey-1' 'hey-2' ... 'hey-27' 'hey-28' 'hey-29'])
+%% \begin{verbatim}
+%% strings(['zero' 'one' 'two' ... 'twenty-nine' 'thirty'])
 %% \end{verbatim}
 %% \begin{uncoverenv}<2->
 %% \begin{minted}{python}
 %% >>> a.jaggedarray.contents
 %% \end{minted}
-%% \begin{verbatim}array([104, 101, 121,  45,  48, 104, 101, 121,  45,  49, 104, 101,
-%%         121, 45,  50, 104, 101, 121,  45,  51, 104, 101, 121,  45,
-%%         ...
-%%         45,  50,  54, 104, 101, 121, 45,  50,  55, 104, 101, 121,
-%%         45,  50,  56, 104, 101, 121,  45,  50,  57], dtype=uint8)
+%% \begin{verbatim}
+%% array([122, 101, 114, 111, 111, 110, 101, 116, 119, 111, 116, 104,
+%%        114, 101, 101, 102, 111, 117, 114, 102, 105, 118, 101, 115,
+%%        ...
+%%        101, 105, 103, 104, 116, 116, 119, 101, 110, 116, 121,  45,
+%%        110, 105, 110, 101, 116, 104, 105, 114, 116, 121], dtype=uint8)
 %% \end{verbatim}
 %% \begin{minted}{python}
 %% >>> a.jaggedarray.stops
 %% \end{minted}
-%% \begin{verbatim}array([  5,  10,  15,  20,  25,  30,  35,  40,  45,  50,  56,  62,
+%% \begin{verbatim}
+%% array([  4,   7,  10,  15,  19,  23,  26,  31,  36,  40,  43,  49,
 %%        ...
-%%        152, 158, 164, 170])
+%%        179, 191, 203, 214, 220])
 %% \end{verbatim}
 %% \end{uncoverenv}
-%% \vspace{-7.7 cm}
+%% \vspace{-7 cm}
 %% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
-%% \vspace{7.7 cm}
+%% \vspace{7 cm}
 %% \end{frame}
 
-%% \begin{frame}[fragile]{Including STL vectors in a MiniAOD file}
+%% \begin{frame}[fragile]{As complex as STL vectors in a MiniAOD file}
 %% \vspace{0.25 cm}
 %% \small
 %% \begin{minted}{python}
@@ -547,55 +550,47 @@
 %% \end{verbatim}
 %% \end{frame}
 
-\begin{frame}[fragile]{Use Bokeh as your TCanvas (even remotely)}
-\vspace{0.25 cm}
-\small
-\begin{minted}{bash}
-$ pip install bokeh --user
-\end{minted}
-\begin{minted}{python}
->>> canvas = uproot.BokehCanvas()   # canvas is a singleton
->>> canvas.show()                   # could set hosts="*", port=12345
-\end{minted}
-\begin{verbatim}
-Created new window in existing browser session.
-WARNING:tornado.access:404 GET /favicon.ico (::1) 1.09ms
-\end{verbatim}
-\begin{minted}{python}
->>> hist.bokeh.plot()
->>> uproot.BokehCanvas().url
-\end{minted}
-\begin{verbatim}
-'http://localhost:41712'
-\end{verbatim}
+%% \begin{frame}[fragile]{Use Bokeh as your TCanvas (even remotely)}
+%% \vspace{0.25 cm}
+%% \small
+%% \begin{minted}{bash}
+%% $ pip install bokeh --user
+%% \end{minted}
+%% \begin{minted}{python}
+%% >>> canvas = uproot.BokehCanvas()   # canvas is a singleton
+%% >>> canvas.show()                   # could set hosts="*", port=12345
+%% \end{minted}
+%% \begin{verbatim}
+%% Created new window in existing browser session.
+%% WARNING:tornado.access:404 GET /favicon.ico (::1) 1.09ms
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist.bokeh.plot()
+%% >>> uproot.BokehCanvas().url
+%% \end{minted}
+%% \begin{verbatim}
+%% 'http://localhost:41712'
+%% \end{verbatim}
 
-\vspace{0.2 cm}
-If Python is running on a remote machine, set \\
-{\tt hosts="*"} or your IP address (for more security) \\
-and manually enter the URL in your web browser.
+%% \vspace{0.2 cm}
+%% If Python is running on a remote machine, set \\
+%% {\tt hosts="*"} or your IP address (for more security) \\
+%% and manually enter the URL in your web browser.
 
-\vspace{0.2 cm}
-The (single) web browser will have a live view of \\
-anything you {\tt hist.bokeh.plot()}.
+%% \vspace{0.2 cm}
+%% The (single) web browser will have a live view of \\
+%% anything you {\tt hist.bokeh.plot()}.
 
-\vspace{-4.25 cm}
-\hfill \includegraphics[height=4.5 cm]{bokeh_plot.png}\hspace{1 cm}
+%% \vspace{-4.25 cm}
+%% \hfill \includegraphics[height=4.5 cm]{bokeh_plot.png}\hspace{1 cm}
 
-\vspace{-2.1 cm}
-\hfill \includegraphics[width=1.5 cm]{danger.png}\hspace{-0.9 cm}
-\vspace{3 cm}
+%% \vspace{-2.1 cm}
+%% \hfill \includegraphics[width=1.5 cm]{danger.png}\hspace{-0.9 cm}
+%% \vspace{3 cm}
+%% \end{frame}
+
+\begin{frame}{}
 \end{frame}
 
 
 \end{document}
-
-
-
-%% \end{verbatim}
-%% \begin{minted}{python}
-%% >>> canvas = hist.bokeh.plot()
-%% >>> canvas.show()
-
-%% >>> uproot.BokehCanvas().url
-%% 'http://localhost:41712'
-%% \end{minted}
