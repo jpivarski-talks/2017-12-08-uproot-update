@@ -426,26 +426,161 @@
 %% \vspace{7.7 cm}
 %% \end{frame}
 
-\begin{frame}[fragile]{Including STL vectors in a MiniAOD file}
-\vspace{0.25 cm}
+%% \begin{frame}[fragile]{Including STL vectors in a MiniAOD file}
+%% \vspace{0.25 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> t = uproot.open("~/cmssw-miniaod.root")["Events"]
+%% \end{minted}
+%% \begin{verbatim}
+%% >>> for basket in (t["GenEventInfoProduct_generator__HLT.obj.weights_"]
+%%                    .iterate_baskets()):
+%% ...     print(basket)
+%% ...
+%% [[  1.000000e+00   4.201630e-05 ...   4.242230e-05   3.990430e-05],
+%%  [  1.000000e+00   4.201630e-05 ...   2.648060e-05   2.773620e-05],
+%%  [  1.000000e+00   4.201630e-05 ...   4.329220e-05   4.058060e-05],
+%%  ...
+%% \end{verbatim}
+
+%% \vspace{0.25 cm}
+%% Though uproot was designed for analysis-ready TTrees, it will someday cover all data types by reading streamer data.
+
+%% \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Can already read arbitrary objects from TDirectory}
+%% \vspace{0.25 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> f = uproot.open("~/histograms.root")
+%% >>> f.allclasses()
+%% \end{minted}
+%% \begin{verbatim}
+%% [('one;1', <class 'uproot.rootio.TH1F'>), ('two;1', <class 'uproot.rootio.TH1F'>),
+%%  ('three;1', <class 'uproot.rootio.TH1F'>)]
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist = f["one"]
+%% >>> for n, v in hist.__dict__.items():   # class generated on the fly
+%% ...     if n.startswith("f"):            # with all the private fields
+%% ...         print n + "\t", v
+%% ...
+%% \end{minted}
+%% \begin{verbatim}
+%% fMarkerStyle    1
+%% fMaximum        -1111.0
+%% fEntries        10000.0
+%% fLineColor      602
+%% fContour        []
+%% fYaxis  <TAxis 'yaxis' at 0x7e3a12cfee50>
+%% fTsumwx2        10388.1526213
+%% \end{verbatim}
+
+%% \vspace{-7.7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{7.7 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Some of these objects have Python methods}
+%% \vspace{0.5 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> hist.numbins, hist.low, hist.high
+%% \end{minted}
+%% \begin{verbatim}
+%% (10, -3.0, 3.0)
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist.values
+%% \end{minted}
+%% \begin{verbatim}
+%% [68.0, 285.0, 755.0, 1580.0, 2296.0, 2286.0, 1570.0, 795.0, 289.0, 76.0])
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist[4] = 0
+%% >>> hist.values
+%% \end{minted}
+%% \begin{verbatim}
+%% [68.0, 285.0, 755.0, 0, 2296.0, 2286.0, 1570.0, 795.0, 289.0, 76.0]
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist.allvalues
+%% \end{minted}
+%% \begin{verbatim}
+%% [0.0, 68.0, 285.0, 755.0, 0, 2296.0, 2286.0, 1570.0, 795.0, 289.0, 76.0, 0.0]
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> hist.underflows, hist.overflows
+%% \end{minted}
+%% \begin{verbatim}
+%% (0.0, 0.0)
+%% \end{verbatim}
+
+%% \vspace{-7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{7 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{You can always view histograms with a line printer}
+%% \vspace{0.1 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> hist.show(width=70)
+%% \end{minted}
+%% \begin{verbatim}
+%%                   0                                               2411
+%%                   +--------------------------------------------------+
+%% [-inf, -3)   0    |                                                  |
+%% [-3, -2.4)   68   |*                                                 |
+%% [-2.4, -1.8) 285  |******                                            |
+%% [-1.8, -1.2) 755  |****************                                  |
+%% [-1.2, -0.6) 0    |                                                  |
+%% [-0.6, 0)    2296 |************************************************  |
+%% [0, 0.6)     2286 |***********************************************   |
+%% [0.6, 1.2)   1570 |*********************************                 |
+%% [1.2, 1.8)   795  |****************                                  |
+%% [1.8, 2.4)   289  |******                                            |
+%% [2.4, 3)     76   |**                                                |
+%% [3, inf]     0    |                                                  |
+%%                   +--------------------------------------------------+
+%% \end{verbatim}
+%% \end{frame}
+
+\begin{frame}[fragile]{}
+\vspace{0.1 cm}
 \small
+\begin{minted}{bash}
+$ pip install bokeh --user
+\end{minted}
 \begin{minted}{python}
->>> t = uproot.open("~/cmssw-miniaod.root")["Events"]
+>>> canvas = hist.bokeh.plot()   # canvas is a singleton
+>>> canvas.show()
+>>> Created new window in existing browser session.
 \end{minted}
 \begin{verbatim}
->>> for basket in (t["GenEventInfoProduct_generator__HLT.obj.weights_"]
-                   .iterate_baskets()):
-...     print(basket)
-...
-[[  1.000000e+00   4.201630e-05 ...   4.242230e-05   3.990430e-05],
- [  1.000000e+00   4.201630e-05 ...   2.648060e-05   2.773620e-05],
- [  1.000000e+00   4.201630e-05 ...   4.329220e-05   4.058060e-05],
+WARNING:tornado.access:404 GET /favicon.ico (::1) 1.09ms
+\end{verbatim}
+\begin{minted}{python}
+>>> uproot.BokehCanvas().url
+\end{minted}
+\begin{verbatim}
+'http://localhost:41712'
 \end{verbatim}
 
-\vspace{0.25 cm}
-Though uproot was designed for analysis-ready TTrees, it will someday cover all data types by reading streamer data.
 
-\hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
 \end{frame}
 
+
 \end{document}
+
+
+
+%% \end{verbatim}
+%% \begin{minted}{python}
+%% >>> canvas = hist.bokeh.plot()
+%% >>> canvas.show()
+
+%% >>> uproot.BokehCanvas().url
+%% 'http://localhost:41712'
+%% \end{minted}
