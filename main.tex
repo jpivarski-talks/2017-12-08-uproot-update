@@ -751,8 +751,75 @@
 %% \vspace{7.7 cm}
 %% \end{frame}
 
+%% \begin{frame}[fragile]{Numba integration}
+%% \vspace{0.25 cm}
+%% \small
+%% Numba is a just-in-time (JIT) compiler for Python. Install Numba standalone or use CMSSW.
+
+%% \begin{minted}{bash}
+%% $ conda install numba   # conda, rather than pip, to get LLVM
+%% \end{minted}
+
+%% \vspace{0.25 cm}
+%% Now any function preceded by {\tt @numba.njit} gets natively compiled \href{http://numba.pydata.org/numba-doc/dev/reference/pysupported.html}{\textcolor{blue}{if Numba knows how}}.
+
+%% Data structures produced by uproot are Numba-aware.
+
+%% \begin{minted}{python}
+%% >>> import numba
+%% >>> @numba.njit
+%% ... def fillhist(pthist, ptarray):
+%% ...     for event in ptarray:
+%% ...         for pt in event:
+%% ...             pthist.fill(pt)
+%% ...     return pthist                   # have to return it
+%% ... 
+%% >>> pthist = uproot.hist(100, 0, 50  )  # create empty TH1
+%% >>> ptarray = t.array("Muon.pt")        # jagged array of arrays
+%% >>> pthist = fillhist(pthist, ptarray)  # runs at the speed of C code
+%% >>> pthist.show(width=70)
+%% \end{minted}
+
+%% \vspace{-5 cm}
+%% \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
+%% \vspace{5 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Functional programming}
+%% \vspace{0.25 cm}
+%% \scriptsize
+%% \begin{minted}{python}
+%% >>> t = uproot.open("tests/samples/Zmumu.root")["events"]
+%% >>> from math import sqrt
+%% >>> def mass(E1, px1, py1, pz1, E2, px2, py2, pz2):
+%% ...     return sqrt((E1 + E2)**2 - (px1 + px2)**2 - (py1 + py2)**2 - (pz1 + pz2)**2)
+%% ... 
+%% >>> t.hist(10, 70, 110, mass).show()
+%% >>> t.filter("E1 > 10 and E2 > 10").hist(10, 70, 110, mass).show()
+%% \end{minted}
+%% \begin{verbatim}
+%%                0                                                           926.1
+%%                +---------------------------------------------------------------+
+%% [-inf, 70) 101 |*******                                                        |
+%% [70, 74)   45  |***                                                            |
+%% [74, 78)   30  |**                                                             |
+%% [78, 82)   70  |*****                                                          |
+%% [82, 86)   114 |********                                                       |
+%% [86, 90)   527 |************************************                           |
+%% [90, 94)   882 |************************************************************   |
+%% [94, 98)   188 |*************                                                  |
+%% [98, 102)  51  |***                                                            |
+%% [102, 106) 12  |*                                                              |
+%% [106, 110) 7   |                                                               |
+%% [110, inf] 13  |*                                                              |
+%%                +---------------------------------------------------------------+
+%% \end{verbatim}
+%% \end{frame}
+
 \begin{frame}{}
+
 \end{frame}
+
 
 
 \end{document}
