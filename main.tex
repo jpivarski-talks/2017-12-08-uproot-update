@@ -486,8 +486,9 @@ fTsumwx2        10388.1526213
 \vspace{7.7 cm}
 \end{frame}
 
-\begin{frame}[fragile]{Some of these objects have Python methods}
+\begin{frame}[fragile]{Some classes are endowed with Python methods}
 \vspace{0.5 cm}
+Histogram inspection and manipulation:
 \small
 \begin{minted}{python}
 >>> hist.numbins, hist.low, hist.high
@@ -696,10 +697,10 @@ Even though Python has a global interpreter lock (GIL), most of the numerical pr
 \end{verbatim}
 
 \vspace{0.25 cm}
-Returns ``await'' function as soon as the work has been {\it submitted} to the executor.
+{\normalsize Returns ``await'' function as soon as the work has been {\it submitted} to the executor.}
 
 \vspace{0.25 cm}
-To get the result (waiting as long as necessary), call the function:
+{\normalsize To get the result (waiting as long as necessary), call the function:}
 \begin{minted}{python}
 >>> results()
 \end{minted}
@@ -841,7 +842,7 @@ The following can be used within a chain:
 \end{itemize}
 
 \vspace{0.25 cm}
-Anything not used is not computed, compiled, or even read from the file.
+Anything not required will not be computed, compiled, or even read from the file.
 
 \vspace{-6.9 cm}
 \hfill \includegraphics[width=1.5 cm]{danger.png}\hspace{-0.9 cm}
