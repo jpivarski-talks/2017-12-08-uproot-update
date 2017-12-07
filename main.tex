@@ -191,9 +191,9 @@ pip install uproot --user
 \vspace{0.5 cm}
 \large
 \begin{description}\setlength{\itemsep}{0.5 cm}
-\item[version 1.x] \textcolor{darkblue}{\it (past)} minimalistic, two-week ROOT-to-Numpy implementation because this feature was delayed in ROOT 6.12.
+\item[version 1.x] \textcolor{darkblue}{\it (last talk here)} minimalistic ROOT-to-Numpy implementation because this feature was delayed in ROOT 6.12.
 
-\item[version 2.x] \textcolor{darkblue}{\it (current)} a complete rewrite using ROOT streamers to read any data type. Anything can now be read from TDirectories but currently only numbers, strings, and {\tt std::vector<number>} can be read from TTrees.
+\item[version 2.x] \textcolor{darkblue}{\it (current)} a complete rewrite using ROOT streamers to recognize any data type. Anything can now be read from TDirectories but currently only numbers, strings, and {\tt std::vector<number>} can be read from TTrees.
 
 \vspace{0.5 cm}
 Classes that have been ``split'' (the default) usually satisfy the above.
@@ -447,8 +447,9 @@ array([  4,   7,  10,  15,  19,  23,  26,  31,  36,  40,  43,  49,
 \end{verbatim}
 
 \vspace{0.25 cm}
-Though uproot was designed for analysis-ready TTrees, it will someday cover all data types by reading streamer data.
+{\normalsize Though uproot was designed for analysis-ready TTrees, it will someday cover all data types by using the streamer info provided in each file.}
 
+\vspace{-0.2 cm}
 \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
 \end{frame}
 
@@ -643,9 +644,9 @@ They can be used in any of three arguments:
 
 \vspace{0.25 cm}
 \begin{itemize}
-\item {\it cache}: caches final, fully interpreted arrays.
-\item {\it basketcache}: caches decompressed TBasket data, to avoid cache-misses when slicing or interpreting the same branch different ways.
-\item {\it keycache}: tiny TKey data; probably put this in an ordinary dict without LRU.
+\item \textcolor{darkblue}{\it cache:} caches final, fully interpreted arrays.
+\item \textcolor{darkblue}{\it basketcache:} caches decompressed TBasket data, to avoid cache-misses when slicing or interpreting the same branch different ways.
+\item \textcolor{darkblue}{\it keycache:} tiny TKey data; probably put this in an ordinary dict without LRU.
 \end{itemize}
 \end{uncoverenv}
 
