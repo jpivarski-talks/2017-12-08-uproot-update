@@ -789,6 +789,53 @@ Data structures produced by uproot are Numba-aware.
 \vspace{5 cm}
 \end{frame}
 
+\begin{frame}[fragile]{Complex, but realistic example}
+\vspace{0.2 cm}
+\scriptsize
+\begin{minted}{python}
+import numba
+from math import sqrt
+
+@numba.njit
+def fillhist(dimuon_hist, quadmuon_hist, NMuon, Muon_Px, Muon_Py, Muon_Pz, Muon_E):
+    for event_i in range(len(NMuon)):
+        totE  = 0.0
+        totPx = 0.0
+        totPy = 0.0
+        totPz = 0.0
+        for muon_i in range(NMuon[event_i]):
+            for muon_j in range(muon_i + 1, NMuon[event_i]):
+                E  = Muon_E[event_i][muon_i]  + Muon_E[event_i][muon_j]
+                Px = Muon_Px[event_i][muon_i] + Muon_Px[event_i][muon_j]
+                Py = Muon_Py[event_i][muon_i] + Muon_Py[event_i][muon_j]
+                Pz = Muon_Pz[event_i][muon_i] + Muon_Pz[event_i][muon_j]
+                dimuon_hist.fill(sqrt(E**2 - Px**2 - Py**2 - Pz**2))
+            totE  += Muon_E[event_i][muon_i]
+            totPx += Muon_Px[event_i][muon_i]
+            totPy += Muon_Py[event_i][muon_i]
+            totPz += Muon_Pz[event_i][muon_i]
+            quadmuon_hist.fill(totE**2 - totPx**2 - totPy**2 - totPz**2)
+    return dimuon_hist, quadmuon_hist
+\end{minted}
+\end{frame}
+
+\begin{frame}{Previous page's plots}
+\begin{columns}
+\column{0.5\linewidth}
+\begin{center}
+{\tt dimuon\_hist}
+
+\includegraphics[width=\linewidth]{dimuon_hist.png}
+\end{center}
+\column{0.5\linewidth}
+\begin{center}
+{\tt quadmuon\_hist}
+
+\includegraphics[width=\linewidth]{quadmuon_hist.png}
+\end{center}
+\end{columns}
+\end{frame}
+
 \begin{frame}[fragile]{Functional programming}
 \vspace{0.25 cm}
 \scriptsize
@@ -849,17 +896,58 @@ Anything not required will not be computed, compiled, or even read from the file
 \vspace{6.9 cm}
 \end{frame}
 
-\begin{frame}{Final remarks}
-\vspace{0.5 cm}
-\large
-The hard part in a project like this is understanding and correctly implementing the ROOT file format. That's where 95\% of the effort and testing have gone.
+\begin{frame}[fragile]{Functional programming}
+\vspace{0.25 cm}
+\small
+{\normalsize All of the expressions you provide are functions of one event, like}
+\begin{minted}{python}
+def complicated(met_pt, jets_pt):
+    total = met_pt
+    for jet_pt in jets_pt:
+        total += jet_pt
+    return total
+\end{minted}
 
-\vspace{1 cm}
-The analysis-level features, connections to external frameworks--- plotters, fitters, machine learning libraries, compilers--- are much easier to add and debug.
+\vspace{0.1 cm}
+{\normalsize or maybe}
 
-\vspace{1 cm}
-So don't be shy about asking for a feature! (Or better yet, contributing one\ldots)
+\vspace{0.1 cm}
+\begin{minted}{python}
+lambda met_pt, jets_pt: met_pt + sum(x for x in jets_pt)
+\end{minted}
+
+\vspace{0.1 cm}
+{\normalsize or maybe}
+
+\vspace{0.1 cm}
+\begin{minted}{python}
+"met_pt + sum(x for x in jets_pt)"
+\end{minted}
+
+\vspace{0.1 cm}
+The upstream requirements, ultimately going back to the TTree branches, are taken from the names of function arguments. In the case of a function defined by a string, variable names in order of appearance are taken to be function arguments.
+
+\vspace{0.1 cm}
+Although these are Python functions, they do get compiled (and inlined by LLVM).
+
+\vspace{-5 cm}
+\hfill \includegraphics[width=1.5 cm]{danger.png}\hspace{-0.9 cm}
+\vspace{5 cm}
 \end{frame}
 
+\begin{frame}{Final remarks}
+\vspace{0.35 cm}
+\large
+\textcolor{darkblue}{\underline{uproot is designed to be:}}
+
+\vspace{0.15 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item \textcolor{darkblue}{combinational:} raw pieces that have to be put together to do a useful thing; it is not a guided path.
+\item \textcolor{darkblue}{consistent:} most functions have long parameter lists, but they're the {\it same} parameters, applicable to every function that has those parameters.
+\item \textcolor{darkblue}{explicit:} uproot does exactly what you ask it to do, so if you don't ask for caching or parallel processing, it won't happen (i.e.\ your memory and CPU usage won't grow unexpectedly).
+\item \textcolor{darkblue}{fast:} any operation applied to every event is performed in compiled code; use Numba to make your user functions compiled.
+\item \textcolor{darkblue}{just I/O:} all the non-I/O features (plotting, statistics, compilation, and perhaps fitting) are offloaded to PyData projects.
+\end{itemize}
+\end{frame}
 
 \end{document}
