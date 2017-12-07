@@ -623,35 +623,135 @@
 %% \vspace{6 cm}
 %% \end{frame}
 
-\begin{frame}{Caching options}
-\vspace{0.25 cm}
-Any dict-like object can be a cache. (On the previous page, we used a dict.)
+%% \begin{frame}{Caching options}
+%% \vspace{0.25 cm}
+%% Any dict-like object can be a cache. (On the previous page, we used a dict.)
 
-\vspace{0.25 cm}
-But dicts don't release objects when running low on memory. Therefore, uproot provides a suite of dict-like objects that {\it do} release the least-recently used (LRU) objects.
+%% \vspace{0.25 cm}
+%% But dicts don't release objects when running low on memory. Therefore, uproot provides a suite of dict-like objects that {\it do} release the least-recently used (LRU) objects.
 
-\vspace{0.25 cm}
-\begin{itemize}
-\item {\tt\small uproot.cache.MemoryCache}: a subclass of dict with LRU policy.
-\item {\tt\small uproot.cache.ThreadSafeMemoryCache}: same with a lock for multithreading.
-\item {\tt\small uproot.cache.DiskCache}: multi-process safe and can be resumed after a Python process exits.
-\end{itemize}
+%% \vspace{0.25 cm}
+%% \begin{itemize}
+%% \item {\tt\small uproot.cache.MemoryCache}: a subclass of dict with LRU policy.
+%% \item {\tt\small uproot.cache.ThreadSafeMemoryCache}: same with a lock for multithreading.
+%% \item {\tt\small uproot.cache.DiskCache}: directory of files, uses POSIX operations like linking and file-locking for multi-process safety. Can be resumed after processes exit.
+%% \end{itemize}
 
-\begin{uncoverenv}<2->
-\vspace{0.25 cm}
-They can be used in any of three arguments:
+%% \begin{uncoverenv}<2->
+%% \vspace{0.25 cm}
+%% They can be used in any of three arguments:
 
-\vspace{0.25 cm}
-\begin{itemize}
-\item {\it cache}: caches finalized arrays.
-\item {\it basketcache}: caches decompressed basket data that may be interpreted more than once.
-\item {\it keycache}: tiny key data; probably put this in a dict without LRU.
-\end{itemize}
-\end{uncoverenv}
+%% \vspace{0.25 cm}
+%% \begin{itemize}
+%% \item {\it cache}: caches final, fully interpreted arrays.
+%% \item {\it basketcache}: caches decompressed basket data, to avoid cache-misses when slicing or interpreting different ways.
+%% \item {\it keycache}: tiny TKey data; probably put this in an ordinary dict without LRU.
+%% \end{itemize}
+%% \end{uncoverenv}
 
-\vspace{-7.7 cm}
-\hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
-\vspace{7.7 cm}
+%% \vspace{-7.7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{7.7 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Similarly, parallel-processing is not implicit}
+%% \vspace{1 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> from concurrent.futures import ThreadPoolExecutor
+%% >>> executor = ThreadPoolExecutor(16)
+%% >>> 
+%% >>> t.arrays(["Muon.pt", "Muon.eta", "Muon.phi"], executor=executor)
+%% \end{minted}
+
+%% \vspace{0.25 cm}
+%% In the above, as many as 16 threads will share the work of
+%% \begin{itemize}
+%% \item reading from disk (memory-mapped file can be multithreaded)
+%% \item decompressing TBaskets belonging to the same TBranch
+%% \item constructing arrays belonging to different TBranches.
+%% \end{itemize}
+
+%% \vspace{0.25 cm}
+%% Even though Python has a global interpreter lock (GIL), most of the work is performed in compiled code with the GIL released.
+
+%% \vspace{-3 cm}
+%% \hfill \includegraphics[width=1.5 cm]{safe.png}\hspace{-0.9 cm}
+%% \vspace{3 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Non-blocking calls}
+%% \vspace{0.5 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> results = t.arrays(executor=executor, blocking=False)
+%% >>> results
+%% \end{minted}
+%% \begin{verbatim}
+%% <function await at 0x747a5d2907d0>
+%% \end{verbatim}
+
+%% \vspace{0.25 cm}
+%% Returns ``await'' function as soon as the work has been {\it submitted} to the executor.
+
+%% \vspace{0.25 cm}
+%% To get the result (waiting as long as necessary), call the function:
+%% \begin{minted}{python}
+%% >>> results()
+%% \end{minted}
+%% \begin{verbatim}
+%% {'CA8Puppi.nNeutrals': jaggedarray([[], [], [], ...,
+%%                                     [], [19 68 14], [10]]),
+%%  'AK4Puppi.hadronFlavor': jaggedarray([[5 0 5 0],
+%%                                        [4 0 5 4 5 0],
+%%                                        [5 0 4 0 0 5],
+%%                                        ...,
+%% \end{verbatim}
+
+%% \vspace{-2 cm}
+%% \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
+%% \vspace{2 cm}
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Lazy arrays}
+%% \vspace{0.1 cm}
+%% \small
+%% \begin{minted}{python}
+%% >>> lazy = t.lazyarrays()
+%% >>> lazy
+%% \end{minted}
+%% \begin{verbatim}
+%% {'CA8Puppi.nNeutrals':
+%%      <uproot.tree._LazyArray object at 0x747a5d4f97d0>,
+%%  'AK4Puppi.hadronFlavor':
+%%      <uproot.tree._LazyArray object at 0x747a5d50ff10>,
+%%  ...
+%% \end{verbatim}
+
+%% \vspace{0.25 cm}
+%% Returns immediately and {\it does no work at all} until/unless you ask for items.
+
+%% \vspace{0.25 cm}
+%% \begin{minted}{python}
+%% >>> lazy["Muon.pt"][:100]
+%% \end{minted}
+%% \begin{verbatim}
+%% jaggedarray([[ 28.07074928],
+%%              ...
+%% \end{verbatim}
+
+%% \vspace{0.25 cm}
+%% Hint: use with caching to avoid re-reading when called twice. Nothing is implicit!
+%% \begin{minted}{python}
+%% >>> read_only_once = t.lazyarrays(cache={})
+%% \end{minted}
+
+%% \vspace{-7.7 cm}
+%% \hfill \includegraphics[width=1.5 cm]{caution.png}\hspace{-0.9 cm}
+%% \vspace{7.7 cm}
+%% \end{frame}
+
+\begin{frame}{}
 \end{frame}
 
 
